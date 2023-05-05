@@ -10,6 +10,12 @@ public class Principal {
 		nomes.add("Rita");
 		nomes.add("Juarez");
 		
+		
+		System.out.println(nomes);
+		
+		nomes.remove(1);
+		System.out.println(nomes);
+		nomes.remove("José");
 		System.out.println(nomes);
 	}
 }
