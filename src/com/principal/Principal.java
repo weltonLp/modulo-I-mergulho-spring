@@ -2,6 +2,7 @@ package com.principal;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class Principal {
 	public static void main(String[] args) {
@@ -11,11 +12,24 @@ public class Principal {
 		nomes.add("Juarez");
 		
 		
-		System.out.println(nomes);
+		nomes.forEach(new Consumer<String>() {
+
+			@Override
+			public void accept(String t) {
+				System.out.println(t);
+				
+			}
+		});
 		
-		nomes.remove(1);
-		System.out.println(nomes);
-		nomes.remove("José");
-		System.out.println(nomes);
+		System.out.println("--------------- LÃMBDA ---------------------------------------------\n");
+		
+		nomes.forEach(nome -> {
+			System.out.println(nome);
+		});
+		
+		
+	
+		
+		
 	}
 }
