@@ -2,34 +2,18 @@ package com.principal;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
+
+import com.classe.Cliente;
 
 public class Principal {
 	public static void main(String[] args) {
-		List<String> nomes = new ArrayList<>();
-		nomes.add("José");
-		nomes.add("Rita");
-		nomes.add("Juarez");
+		List<Cliente> clientes = new ArrayList<>();
 		
-		
-		nomes.forEach(new Consumer<String>() {
-
-			@Override
-			public void accept(String t) {
-				System.out.println(t);
-				
-			}
-		});
-		
-		System.out.println("--------------- LÃMBDA ---------------------------------------------\n");
-		
-		nomes.forEach(nome -> {
-			System.out.println(nome);
-		});
-		
-		
+		clientes.add(new Cliente(15L, "José"));
+		clientes.add(new Cliente(38L, "Ricardo"));
+		clientes.add(new Cliente(78L, "Francelia"));
 	
 		
-		
+		clientes.forEach(cliente ->System.out.printf("ID: %d, Nome: %s%n", cliente.getId(), cliente.getNome()));
 	}
 }
