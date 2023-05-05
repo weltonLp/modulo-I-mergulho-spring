@@ -1,7 +1,15 @@
 package com.principal;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Principal {
 	public static void main(String[] args) {
-		System.out.println("Primeiro Teste");
+		List<String> nomes = new ArrayList<>();
+		nomes.add("José");
+		nomes.add("Rita");
+		nomes.add("Juarez");
+		
+		System.out.println(nomes);
 	}
 }
